@@ -4,7 +4,7 @@
     "main": "dist/index.js",
     "scripts": {
         "dev": "tsx watch src/index.ts",
-        "build": "tsc",
+        "build": "pnpm run tsc",
         "start": "node dist/index.js",
         "migrate": "prisma migrate dev",
         "migrate:deploy": "prisma migrate deploy",
@@ -13,6 +13,31 @@
         "test": "jest",
         "test:watch": "jest --watch"
     },
+    "dependencies": {
+        "@fastify/cors": "^latest",
+        "@prisma/client": "^latest",
+        "bcryptjs": "^latest",
+        "dotenv": "^latest",
+        "fastify": "^latest",
+        "jsonwebtoken": "^latest",
+        "zod": "^latest"
+    },
+    "devDependencies": {
+        "@types/bcryptjs": "^latest",
+        "@types/jest": "^latest",
+        "@types/jsonwebtoken": "^latest",
+        "@types/node": "^latest",
+        "jest": "^latest",
+        "prisma": "^latest",
+        "ts-jest": "^latest",
+        "tsx": "^latest",
+        "typescript": "^latest"
+    },
     "author": "Ruan Santos",
-    "license": "ISC"
+    "license": "ISC",
+    "pnpm": {
+        "overrides": {
+            "typescript": "^latest"
+        }
+    }
 }
