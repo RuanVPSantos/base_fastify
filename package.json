@@ -1,0 +1,18 @@
+{
+    "name": "base_fastify",
+    "version": "1.0.0",
+    "main": "dist/index.js",
+    "scripts": {
+        "dev": "tsx watch src/index.ts",
+        "build": "tsc",
+        "start": "node dist/index.js",
+        "migrate": "prisma migrate dev",
+        "migrate:deploy": "prisma migrate deploy",
+        "generate": "prisma generate",
+        "seed": "tsx src/start_db/seed.ts",
+        "test": "jest",
+        "test:watch": "jest --watch"
+    },
+    "author": "Ruan Santos",
+    "license": "ISC"
+}
